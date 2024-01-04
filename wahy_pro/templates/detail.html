@@ -1,0 +1,13 @@
+{% extends 'base.html' %} 
+{% block content%}
+    {% include 'nav.html' %}
+    <div class="card" style="width: 100%;">
+        <img src="{{ product.image.url }}" class="card-img-top" style="height: 400px;" alt="...">
+        <div class="card-body">
+          <h2 class="card-text">{{product.name}}</h2>
+          <p class="card-text">{{ product.discr }}</p>
+         <a href="{% url 'delete' product.id %}" ><button type="button" class="btn">delete</button></a>
+         <a href="{% url 'edit' product.id %}" ><button type="button" class="btn">UPDATE</button>
+        </div>
+    </div>
+{% endblock %}

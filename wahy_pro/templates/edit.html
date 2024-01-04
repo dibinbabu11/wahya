@@ -1,0 +1,9 @@
+{% extends 'base.html' %} 
+{% block content %}
+{% include 'nav.html' %}
+
+<form method='POST' enctype='multypart/form-data'>
+    {% csrf_token %}
+    {{form.as_p}}
+</form>
+{% endblock%}

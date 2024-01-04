@@ -1,0 +1,11 @@
+{% extends 'base.html' %} 
+{% block content %}
+{% include 'nav.html' %}
+
+<form method='POST'>
+    {% csrf_token %}
+    DELETE THIS PRODUCT
+    <input type='submit'>    
+</form>
+
+{% endblock%}
